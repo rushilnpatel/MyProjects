@@ -1,0 +1,1247 @@
+#!/bin/ksh
+
+let S11=0
+let S12=0
+let C1=0
+let S21=0
+let S22=0
+let C2=0
+let S31=0
+let S32=0
+let C3=0
+let S41=0
+let S42=0
+let C4=0
+let S51=0
+let S52=0
+let C5=0
+let S61=0
+let S62=0
+let C6=0
+let S71=0
+let S72=0
+let C7=0
+let S81=0
+let S82=0
+let C8=0
+let S91=0
+let S92=0
+let C9=0
+let S101=0
+let C10=0
+let S102=0
+let S103=0
+let C11=0
+let CS1=0
+let CS2=0
+let CS3=0
+let CS4=0
+let CS5=0
+let CS6=0
+let CS7=0
+let CS8=0
+let CS9=0
+let CS10=0
+ 
+
+
+while [ "$NAME" = "" ]
+do
+
+  read NAME?"Enter Name > "
+done
+echo $NAME | grep '[0-9]'
+while [ $? -eq 0 ]
+do
+  echo enter only name No NUMBERS
+  read NAME?"Name > "
+  echo $NAME | grep '[0-9]'
+done
+echo "Welcome $NAME "
+
+banner bowl
+sleep 2
+clear
+
+echo "Hey $NAME, bowl your first Turn"
+
+
+read S11?"What's score of frame 1 Bowl 1 > "
+echo $S11 | grep '[0-9]' 
+while [ $? -ne 0 ]
+do
+	echo "Nope, Let's Try one More Time > "
+	read S11?"What's score of frame 1 Bowl 1 > "
+	echo $S11 | grep '[0-9]' 
+done
+while [ "$S11" -gt 10 ]
+do
+	echo "Score Cannot Be Exceed to 10 "
+	read S11?"What's score of frame 1 Bowl 1 > "
+done
+if [ "$S11" -eq 10 ]
+then
+	echo "Strike...!!"
+else
+	if [ "$S11" -eq "" ]
+	then
+		while [ -z "$S11" ]
+		do
+			read S11?"What's score of frame 1 Bowl 1 > "
+			echo $S11 | grep '[0-9]'
+			while [ $? -ne 0 ]
+			do
+				echo "Nope, Let's Try one More Time > "
+				read S11?"What's score of frame 1 Bowl 1 > "
+				echo $S11 | grep '[0-9]' 
+			done
+		done
+	fi
+	read S12?"What's score of frame 1 Bowl 2 > "
+	echo $S12 | grep '[0-9]' 
+	while [ $? -ne 0 ]
+	do
+		echo "Nope, Let's Try one More Time > "
+		read S12?"What's score of frame 1 Bowl 2 > "
+		echo $S12 | grep '[0-9]' 
+	done
+	if [ "$S12" -eq "" ]
+	then
+		while [ -z "$S12" ]
+		do
+			read S12?"What's score of frame 1 Bowl 2 > "
+		done
+	fi
+	while [ "$S11+$S12" -gt 10 ]
+	do
+		echo "Score Cannot Be Exceed to 10 "
+		read S12?"What's score of frame 1 Bowl 2 > "
+		echo $S12 | grep '[0-9]' 
+		while [ $? -ne 0 ]
+		do
+			echo "Score Cannot Be Exceed to 10 "
+			read S12?"What's score of frame 1 Bowl 2 > "
+			echo $S12 | grep '[0-9]' 
+		done
+		if [ "$S12" -eq "" ]
+		then
+			while [ -z "$S12" ]
+			do
+				read S12?"What's score of frame 1 Bowl 2 > "
+			done
+		fi
+	done
+	
+fi
+
+
+read S21?"What's score of frame 2 Bowl 1 > "
+echo $S21 | grep '[0-9]' 
+while [ $? -ne 0 ]
+do
+	echo "Nope, Let's Try one More Time > "
+	read S21?"What's score of frame 2 Bowl 1 > "
+	echo $S21 | grep '[0-9]' 
+done
+while [ "$S21" -gt 10 ]
+do
+	echo "Score Cannot Be Exceed to 10 "
+	read S21?"What's score of frame 2 Bowl 1 > "
+done
+if [ "$S21" -eq 10 ]
+then
+	echo "Strike...!!"
+else
+	if [ "$S21" -eq "" ]
+	then
+		while [ -z "$S21" ]
+		do
+			read S21?"What's score of frame 2 Bowl 1 > "
+			echo $S21 | grep '[0-9]'
+			while [ $? -ne 0 ]
+			do
+				echo "Nope, Let's Try one More Time > "
+				read S21?"What's score of frame 2 Bowl 1 > "
+				echo $S21 | grep '[0-9]' 
+			done
+		done
+	fi
+	read S22?"What's score of frame 2 Bowl 2 > "
+	echo $S22 | grep '[0-9]' 
+	while [ $? -ne 0 ]
+	do
+		echo "Nope, Let's Try one More Time > "
+		read S22?"What's score of frame 2 Bowl 2 > "
+		echo $S22 | grep '[0-9]' 
+	done
+	if [ "$S22" -eq "" ]
+	then
+		while [ -z "$S22" ]
+		do
+			read S22?"What's score of frame 2 Bowl 2 > "
+		done
+	fi
+	while [ "$S21+$S22" -gt 10 ]
+	do
+		echo "Score Cannot Be Exceed to 10 "
+		read S22?"What's score of frame 2 Bowl 2 > "
+		echo $S22 | grep '[0-9]' 
+		while [ $? -ne 0 ]
+		do
+			echo "Score Cannot Be Exceed to 10 "
+			read S22?"What's score of frame 2 Bowl 2 > "
+			echo $S22 | grep '[0-9]' 
+		done
+		if [ "$S22" -eq "" ]
+		then
+			while [ -z "$S22" ]
+			do
+				read S22?"What's score of frame 2 Bowl 2 > "
+			done
+		fi
+	done
+	
+fi
+
+##
+
+
+read S31?"What's score of frame 3 Bowl 1 > "
+echo $S31 | grep '[0-9]' 
+while [ $? -ne 0 ]
+do
+	echo "Nope, Let's Try one More Time > "
+	read S31?"What's score of frame 3 Bowl 1 > "
+	echo $S31 | grep '[0-9]' 
+done
+while [ "$S31" -gt 10 ]
+do
+	echo "Score Cannot Be Exceed to 10 "
+	read S31?"What's score of frame 3 Bowl 1 > "
+done
+if [ "$S31" -eq 10 ]
+then
+	echo "Strike...!!"
+else
+	if [ "$S31" -eq "" ]
+	then
+		while [ -z "$S31" ]
+		do
+			read S31?"What's score of frame 3 Bowl 1 > "
+			echo $S31 | grep '[0-9]'
+			while [ $? -ne 0 ]
+			do
+				echo "Nope, Let's Try one More Time > "
+				read S31?"What's score of frame 3 Bowl 1 > "
+				echo $S31 | grep '[0-9]' 
+			done
+		done
+	fi
+	read S32?"What's score of frame 3 Bowl 2 > "
+	echo $S32 | grep '[0-9]' 
+	while [ $? -ne 0 ]
+	do
+		echo "Nope, Let's Try one More Time > "
+		read S32?"What's score of frame 3 Bowl 2 > "
+		echo $S32 | grep '[0-9]' 
+	done
+	if [ "$S32" -eq "" ]
+	then
+		while [ -z "$S32" ]
+		do
+			read S32?"What's score of frame 3 Bowl 2 > "
+		done
+	fi
+	while [ "$S31+$S32" -gt 10 ]
+	do
+		echo "Score Cannot Be Exceed to 10 "
+		read S32?"What's score of frame 3 Bowl 2 > "
+		echo $S32 | grep '[0-9]' 
+		while [ $? -ne 0 ]
+		do
+			echo "Score Cannot Be Exceed to 10 "
+			read S32?"What's score of frame 3 Bowl 2 > "
+			echo $S32 | grep '[0-9]' 
+		done
+		if [ "$S32" -eq "" ]
+		then
+			while [ -z "$S32" ]
+			do
+				read S32?"What's score of frame 3 Bowl 2 > "
+			done
+		fi
+	done
+	
+fi
+
+##
+
+
+read S41?"What's score of frame 4 Bowl 1 > "
+echo $S41 | grep '[0-9]' 
+while [ $? -ne 0 ]
+do
+	echo "Nope, Let's Try one More Time > "
+	read S41?"What's score of frame 4 Bowl 1 > "
+	echo $S41 | grep '[0-9]' 
+done
+while [ "$S41" -gt 10 ]
+do
+	echo "Score Cannot Be Exceed to 10 "
+	read S41?"What's score of frame 4 Bowl 1 > "
+done
+if [ "$S41" -eq 10 ]
+then
+	echo "Strike...!!"
+else
+	if [ "$S41" -eq "" ]
+	then
+		while [ -z "$S41" ]
+		do
+			read S41?"What's score of frame 4 Bowl 1 > "
+			echo $S41 | grep '[0-9]'
+			while [ $? -ne 0 ]
+			do
+				echo "Nope, Let's Try one More Time > "
+				read S41?"What's score of frame 4 Bowl 1 > "
+				echo $S41 | grep '[0-9]' 
+			done
+		done
+	fi
+	read S42?"What's score of frame 4 Bowl 2 > "
+	echo $S42 | grep '[0-9]' 
+	while [ $? -ne 0 ]
+	do
+		echo "Nope, Let's Try one More Time > "
+		read S42?"What's score of frame 4 Bowl 2 > "
+		echo $S42 | grep '[0-9]' 
+	done
+	if [ "$S42" -eq "" ]
+	then
+		while [ -z "$S42" ]
+		do
+			read S42?"What's score of frame 4 Bowl 2 > "
+		done
+	fi
+	while [ "$S41+$S42" -gt 10 ]
+	do
+		echo "Score Cannot Be Exceed to 10 "
+		read S42?"What's score of frame 4 Bowl 2 > "
+		echo $S42 | grep '[0-9]' 
+		while [ $? -ne 0 ]
+		do
+			echo "Score Cannot Be Exceed to 10 "
+			read S42?"What's score of frame 4 Bowl 2 > "
+			echo $S32 | grep '[0-9]' 
+		done
+		if [ "$S42" -eq "" ]
+		then
+			while [ -z "$S42" ]
+			do
+				read S42?"What's score of frame 4 Bowl 2 > "
+			done
+		fi
+	done
+	
+fi
+
+##
+
+read S51?"What's score of frame 5 Bowl 1 > "
+echo $S51 | grep '[0-9]' 
+while [ $? -ne 0 ]
+do
+	echo "Nope, Let's Try one More Time > "
+	read S51?"What's score of frame 5 Bowl 1 > "
+	echo $S51 | grep '[0-9]' 
+done
+while [ "$S51" -gt 10 ]
+do
+	echo "Score Cannot Be Exceed to 10 "
+	read S51?"What's score of frame 5 Bowl 1 > "
+done
+if [ "$S51" -eq 10 ]
+then
+	echo "Strike...!!"
+else
+	if [ "$S51" -eq "" ]
+	then
+		while [ -z "$S51" ]
+		do
+			read S51?"What's score of frame 5 Bowl 1 > "
+			echo $S51 | grep '[0-9]'
+			while [ $? -ne 0 ]
+			do
+				echo "Nope, Let's Try one More Time > "
+				read S51?"What's score of frame 5 Bowl 1 > "
+				echo $S51 | grep '[0-9]' 
+			done
+		done
+	fi
+	read S52?"What's score of frame 5 Bowl 2 > "
+	echo $S52 | grep '[0-9]' 
+	while [ $? -ne 0 ]
+	do
+		echo "Nope, Let's Try one More Time > "
+		read S52?"What's score of frame 5 Bowl 2 > "
+		echo $S52 | grep '[0-9]' 
+	done
+	if [ "$S52" -eq "" ]
+	then
+		while [ -z "$S52" ]
+		do
+			read S52?"What's score of frame 5 Bowl 2 > "
+		done
+	fi
+	while [ "$S51+$S52" -gt 10 ]
+	do
+		echo "Score Cannot Be Exceed to 10 "
+		read S52?"What's score of frame 5 Bowl 2 > "
+		echo $S52 | grep '[0-9]' 
+		while [ $? -ne 0 ]
+		do
+			echo "Score Cannot Be Exceed to 10 "
+			read S52?"What's score of frame 5 Bowl 2 > "
+			echo $S52 | grep '[0-9]' 
+		done
+		if [ "$S52" -eq "" ]
+		then
+			while [ -z "$S52" ]
+			do
+				read S52?"What's score of frame 5 Bowl 2 > "
+			done
+		fi
+	done
+	
+fi
+
+##
+
+read S61?"What's score of frame 6 Bowl 1 > "
+echo $S61 | grep '[0-9]' 
+while [ $? -ne 0 ]
+do
+	echo "Nope, Let's Try one More Time > "
+	read S61?"What's score of frame 6 Bowl 1 > "
+	echo $S61 | grep '[0-9]' 
+done
+while [ "$S61" -gt 10 ]
+do
+	echo "Score Cannot Be Exceed to 10 "
+	read S61?"What's score of frame 6 Bowl 1 > "
+done
+if [ "$S61" -eq 10 ]
+then
+	echo "Strike...!!"
+else
+	if [ "$S61" -eq "" ]
+	then
+		while [ -z "$S61" ]
+		do
+			read S61?"What's score of frame 6 Bowl 1 > "
+			echo $S61 | grep '[0-9]'
+			while [ $? -ne 0 ]
+			do
+				echo "Nope, Let's Try one More Time > "
+				read S61?"What's score of frame 6 Bowl 1 > "
+				echo $S61 | grep '[0-9]' 
+			done
+		done
+	fi
+	read S62?"What's score of frame 6 Bowl 2 > "
+	echo $S62 | grep '[0-9]' 
+	while [ $? -ne 0 ]
+	do
+		echo "Nope, Let's Try one More Time > "
+			read S62?"What's score of frame 6 Bowl 2 > "
+		echo $S62 | grep '[0-9]' 
+	done
+	if [ "$S62" -eq "" ]
+	then
+		while [ -z "$S62" ]
+		do
+				read S62?"What's score of frame 6 Bowl 2 > "
+		done
+	fi
+	while [ "$S61+$S62" -gt 10 ]
+	do
+		echo "Score Cannot Be Exceed to 10 "
+			read S62?"What's score of frame 6 Bowl 2 > "
+		echo $S62 | grep '[0-9]' 
+		while [ $? -ne 0 ]
+		do
+			echo "Score Cannot Be Exceed to 10 "
+				read S62?"What's score of frame 6 Bowl 2 > "
+			echo $S62 | grep '[0-9]' 
+		done
+		if [ "$S62" -eq "" ]
+		then
+			while [ -z "$S62" ]
+			do
+					read S62?"What's score of frame 6 Bowl 2 > "
+			done
+		fi
+	done
+	
+fi
+
+##
+
+read S71?"What's score of frame 7 Bowl 1 > "
+echo $S71 | grep '[0-9]' 
+while [ $? -ne 0 ]
+do
+	echo "Nope, Let's Try one More Time > "
+	read S71?"What's score of frame 7 Bowl 1 > "
+	echo $S71 | grep '[0-9]' 
+done
+while [ "$S71" -gt 10 ]
+do
+	echo "Score Cannot Be Exceed to 10 "
+	read S71?"What's score of frame 7 Bowl 1 > "
+done
+if [ "$S71" -eq 10 ]
+then
+	echo "Strike...!!"
+else
+	if [ "$S71" -eq "" ]
+	then
+		while [ -z "$S71" ]
+		do
+		read S71?"What's score of frame 7 Bowl 1 > "
+			echo $S71 | grep '[0-9]'
+			while [ $? -ne 0 ]
+			do
+				echo "Nope, Let's Try one More Time > "
+				read S71?"What's score of frame 7 Bowl 1 > "
+				echo $S71 | grep '[0-9]' 
+			done
+		done
+	fi
+	read S72?"What's score of frame 7 Bowl 2 > "
+	echo $S72 | grep '[0-9]' 
+	while [ $? -ne 0 ]
+	do
+		echo "Nope, Let's Try one More Time > "
+			read S72?"What's score of frame 7 Bowl 2 > "
+		echo $S72 | grep '[0-9]' 
+	done
+	if [ "$S72" -eq "" ]
+	then
+		while [ -z "$S72" ]
+		do
+				read S72?"What's score of frame 6 Bowl 2 > "
+		done
+	fi
+	while [ "$S71+$S72" -gt 10 ]
+	do
+		echo "Score Cannot Be Exceed to 10 "
+		read S72?"What's score of frame 7 Bowl 2 > "
+		echo $S72 | grep '[0-9]' 
+		while [ $? -ne 0 ]
+		do
+			echo "Score Cannot Be Exceed to 10 "
+				read S72?"What's score of frame 7 Bowl 2 > "
+			echo $S72 | grep '[0-9]' 
+		done
+		if [ "$S72" -eq "" ]
+		then
+			while [ -z "$S72" ]
+			do
+					read S72?"What's score of frame 6 Bowl 2 > "
+			done
+		fi
+	done
+	
+fi
+
+
+##
+
+read S81?"What's score of frame 8 Bowl 1 > "
+echo $S81 | grep '[0-9]' 
+while [ $? -ne 0 ]
+do
+	echo "Nope, Let's Try one More Time > "
+	read S81?"What's score of frame 8 Bowl 1 > "
+	echo $S81 | grep '[0-9]' 
+done
+while [ "$S81" -gt 10 ]
+do
+	echo "Score Cannot Be Exceed to 10 "
+	read S81?"What's score of frame 8 Bowl 1 > "
+done
+if [ "$S81" -eq 10 ]
+then
+	echo "Strike...!!"
+else
+	if [ "$S81" -eq "" ]
+	then
+		while [ -z "$S81" ]
+		do
+		read S81?"What's score of frame 8 Bowl 1 > "
+			echo $S81 | grep '[0-9]'
+			while [ $? -ne 0 ]
+			do
+				echo "Nope, Let's Try one More Time > "
+				read S81?"What's score of frame 8 Bowl 1 > "
+				echo $S81 | grep '[0-9]' 
+			done
+		done
+	fi
+	read S82?"What's score of frame 8 Bowl 2 > "
+	echo $S82 | grep '[0-9]' 
+	while [ $? -ne 0 ]
+	do
+		echo "Nope, Let's Try one More Time > "
+			read S82?"What's score of frame 8 Bowl 2 > "
+		echo $S82 | grep '[0-9]' 
+	done
+	if [ "$S82" -eq "" ]
+	then
+		while [ -z "$S82" ]
+		do
+				read S82?"What's score of frame 8 Bowl 2 > "
+		done
+	fi
+	while [ "$S81+$S82" -gt 10 ]
+	do
+		echo "Score Cannot Be Exceed to 10 "
+	read S82?"What's score of frame 8 Bowl 2 > "
+		echo $S82 | grep '[0-9]' 
+		while [ $? -ne 0 ]
+		do
+			echo "Score Cannot Be Exceed to 10 "
+				read S82?"What's score of frame 8 Bowl 2 > "
+			echo $S82 | grep '[0-9]' 
+		done
+		if [ "$S82" -eq "" ]
+		then
+			while [ -z "$S82" ]
+			do
+					read S82?"What's score of frame 8 Bowl 2 > "
+			done
+		fi
+	done
+	
+fi
+
+##
+
+read S91?"What's score of frame 9 Bowl 1 > "
+echo $S91 | grep '[0-9]' 
+while [ $? -ne 0 ]
+do
+	echo "Nope, Let's Try one More Time > "
+	read S91?"What's score of frame 9 Bowl 1 > "
+	echo $S91 | grep '[0-9]' 
+done
+while [ "$S91" -gt 10 ]
+do
+	echo "Score Cannot Be Exceed to 10 "
+	read S91?"What's score of frame 9 Bowl 1 > "
+done
+if [ "$S91" -eq 10 ]
+then
+	echo "Strike...!!"
+else
+	if [ "$S91" -eq "" ]
+	then
+		while [ -z "$S91" ]
+		do
+		read S91?"What's score of frame 9 Bowl 1 > "
+			echo $S91 | grep '[0-9]'
+			while [ $? -ne 0 ]
+			do
+				echo "Nope, Let's Try one More Time > "
+				read S91?"What's score of frame 9 Bowl 1 > "
+				echo $S91 | grep '[0-9]' 
+			done
+		done
+	fi
+	read S92?"What's score of frame 9 Bowl 2 > "
+	echo $S92 | grep '[0-9]' 
+	while [ $? -ne 0 ]
+	do
+		echo "Nope, Let's Try one More Time > "
+			read S92?"What's score of frame 9 Bowl 2 > "
+		echo $S92 | grep '[0-9]' 
+	done
+	if [ "$S92" -eq "" ]
+	then
+		while [ -z "$S92" ]
+		do
+				read S92?"What's score of frame 9 Bowl 2 > "
+		done
+	fi
+	while [ "$S91+$S92" -gt 10 ]
+	do
+		echo "Score Cannot Be Exceed to 10 "
+	read S92?"What's score of frame 9 Bowl 2 > "
+		echo $S92 | grep '[0-9]' 
+		while [ $? -ne 0 ]
+		do
+			echo "Score Cannot Be Exceed to 10 "
+				read S92?"What's score of frame 9 Bowl 2 > "
+			echo $S92 | grep '[0-9]' 
+		done
+		if [ "$S92" -eq "" ]
+		then
+			while [ -z "$S92" ]
+			do
+					read S92?"What's score of frame 8 Bowl 2 > "
+			done
+		fi
+	done
+	
+fi
+##
+read S101?"What's score of frame 10 Bowl 1 > "
+echo $S101 | grep '[0-9]' 
+while [ $? -ne 0 ]
+do
+	echo "Nope, Let's Try one More Time > "
+	read S101?"What's score of frame 10 Bowl 1 > "
+	echo $S101 | grep '[0-9]' 
+done
+while [ "$S101" -gt 10 ]
+do
+	echo "Score Cannot Be Exceed to 10 "
+	read S101?"What's score of frame 10 Bowl 1 > "
+done
+if [ "$S101" -eq 10 ]
+then
+	echo "Strike...!!"
+	read S102?"What's score of frame 10 Bowl 2 > "
+	echo $S102 | grep '[0-9]' 
+	while [ $? -ne 0 ]
+	do
+		echo "Nope, Let's Try one More Time > "
+			read S102?"What's score of frame 10 Bowl 2 > "
+		echo $S102 | grep '[0-9]' 
+	done
+else
+	if [ "$S101" -eq "" ]
+	then
+		while [ -z "$S101" ]
+		do
+		read S101?"What's score of frame 10 Bowl 1 > "
+			echo $S101 | grep '[0-9]'
+			while [ $? -ne 0 ]
+			do
+				echo "Nope, Let's Try one More Time > "
+				read S101?"What's score of frame 10 Bowl 1 > "
+				echo $S101 | grep '[0-9]' 
+			done
+		done
+	fi
+	read S102?"What's score of frame 10 Bowl 2 > "
+	echo $S102 | grep '[0-9]' 
+	while [ $? -ne 0 ]
+	do
+		echo "Nope, Let's Try one More Time > "
+			read S102?"What's score of frame 10 Bowl 2 > "
+		echo $S102 | grep '[0-9]' 
+	done
+	if [ "$S102" -eq "" ]
+	then
+		while [ -z "$S102" ]
+		do
+				read S102?"What's score of frame 10 Bowl 2 > "
+		done
+	fi
+	while [ "$S101+$S102" -gt 10 ]
+	do
+		echo "Score Cannot Be Exceed to 10 "
+	read S102?"What's score of frame 10 Bowl 2 > "
+		echo $S102 | grep '[0-9]' 
+		while [ $? -ne 0 ]
+		do
+			echo "Score Cannot Be Exceed to 10 "
+				read S102?"What's score of frame 10 Bowl 2 > "
+			echo $S102 | grep '[0-9]' 
+		done
+		if [ "$S102" -eq "" ]
+		then
+			while [ -z "$S102" ]
+			do
+					read S102?"What's score of frame 10 Bowl 2 > "
+			done
+		fi
+	done
+fi
+
+if [ "$S101" -eq 10 ] || [ "$S102" -eq 10 ] || [ "$S101+$S102" -eq 10 ]
+then 
+
+read S103?"What's score of frame 10 Bowl 3 > "
+echo $S103 | grep '[0-9]' 
+while [ $? -ne 0 ]
+do
+	echo "Nope, Let's Try one More Time > "
+	read S103?"What's score of frame 10 Bowl 3 > "
+	echo $S103 | grep '[0-9]' 
+done
+else
+S103=0
+fi 
+
+##	
+
+echo $S11, $S12, $S21, $S22, $S31, $S32, $S41, $S42, $S51, $S52, $S61, $S62, $S71, $S72, $S81, $S82, $S91, $S92, $S101, $S102, $S103
+
+
+echo Hi
+
+
+
+if [ "$S11" -eq 10 ]
+then
+      CS1=$(($S11+$S12))
+	    (( C1+=1 ))
+	
+else
+       if [ "(($S11+$S12))" -eq 10 ]
+       then
+               echo "Its a spare"
+               CS1=$(($S11+$S12+$S21))
+               
+       else
+                CS1=$(($S11+$S12))
+       fi
+fi
+if [ "$S21" -eq 10 ]
+then
+      echo "$" #let f2=$fb2+$fb3.
+	  (( C1+=1 ))
+	  (( C2+=1 ))
+	   CS1=$(($S11+$S12+$S21))
+else
+       if [ "(($S21+$S22))" -eq 10 ]
+       then
+               echo "Its a Spare"
+				CS2=$(($S21+$S22+$S31))
+				 else
+				
+				CS2=$(($S21+$S22))
+				
+				
+       fi
+	(( C1+=1 ))
+	if [ "$C1" -eq 2 ]
+	then
+		CS1=$(($S11+$S21+$S22))
+		(( C1+=1 ))
+	fi
+	
+fi
+if [ "$S31" -eq 10 ]
+then
+		(( C1+=1 )) 
+		(( C2+=1 ))
+		(( C3+=1 ))
+		if [ "$C1" -eq 3 ]
+		then 
+        CS1=$(($S11+$S21+$S31))
+		
+		fi 
+		
+else
+       if [ "(($S31+$S32))" -eq 10 ]
+       then
+               CS3=$(($S31+$S32+$S41))
+			(( C1+=1 )) 
+			if [ "$C1" -eq 3 ]
+			then 
+				CS1=$(($S11+$S21+$S31))
+		
+			fi 
+       else
+				#CS1=$(($S11+$S31+$S32))
+				CS3=$(($S31+$S32))
+       fi
+	  
+	   (( C2+=1 ))
+	if [ "$C2" -eq 2 ]
+	then
+		CS2=$(($S21+$S31+$S32))
+		(( C2+=1 ))
+		
+	fi
+
+fi
+
+if [ "$S41" -eq 10 ]
+then
+		(( C2+=1 ))
+		(( C3+=1 ))
+		(( C4+=1 ))
+		if [ "$C2" -eq 3 ]
+		then 
+        CS2=$(($S21+$S31+$S41))
+		
+		fi 
+        
+else
+       if [ "(($S41+$S42))" -eq 10 ]
+       then
+                CS4=$(($S41+$S42+$S51))
+				
+       else
+               
+			CS4=$(($S41+$S42))
+       fi
+	   
+	 if [ "$C3" -eq 2 ]
+		then
+		CS3=$(($S31+$S41+$S42))
+		(( C3+=1 ))
+		
+	fi
+	(( C2+=1 ))
+	if [ "$C2" -eq 3 ]
+	then 
+	  CS2=$(($S21+$S31+$S41))
+	  (( C2+=1 ))
+	fi
+	(( C3+=1 ))
+	if [ "$C3" -eq 2 ]
+	then
+		CS3=$(($S31+$S41+$S42))
+		(( C3+=1 ))
+	fi
+	
+	
+#CS2=$(($S21+$S31+$S41))
+fi
+
+if [ "$S51" -eq 10 ]
+then
+		(( C3+=1 ))
+		(( C4+=1 ))
+		(( C5+=1 ))
+		if [ "$C3" -eq 3 ]
+		then 
+        CS3=$(($S31+$S41+$S51))
+		
+		fi 
+        
+else
+       if [ "(($S51+$S52))" -eq 10 ]
+       then
+                CS5=$(($S51+$S52+$S61))
+				
+       else
+               
+			CS5=$(($S51+$S52))
+       fi
+	   
+	 if [ "$C4" -eq 2 ]
+		then
+		CS4=$(($S41+$S51+$S52))
+		(( C4+=1 ))
+		
+	fi
+	(( C3+=1 ))
+	if [ "$C3" -eq 3 ]
+	then 
+	  CS3=$(($S31+$S41+$S51))
+	  (( C3+=1 ))
+	fi
+	(( C4+=1 ))
+	if [ "$C4" -eq 2 ]
+	then
+		CS4=$(($S41+$S51+$S52))
+		(( C4+=1 ))
+	fi
+	
+	
+#CS2=$(($S21+$S31+$S41))
+fi
+
+if [ "$S61" -eq 10 ]
+then
+		(( C4+=1 ))
+		(( C5+=1 ))
+		(( C6+=1 ))
+		if [ "$C4" -eq 3 ]
+		then 
+        CS4=$(($S41+$S51+$S61))
+		
+		fi 
+        
+else
+       if [ "(($S61+$S62))" -eq 10 ]
+       then
+                CS6=$(($S61+$S62+$S71))
+				
+       else
+               
+			CS6=$(($S61+$S62))
+       fi
+	   
+	 if [ "$C5" -eq 2 ]
+		then
+		CS5=$(($S51+$S61+$S62))
+		(( C5+=1 ))
+		
+	fi
+	(( C4+=1 ))
+	if [ "$C4" -eq 3 ]
+	then 
+	  CS4=$(($S41+$S51+$S61))
+	  (( C4+=1 ))
+	fi
+	(( C5+=1 ))
+	if [ "$C5" -eq 2 ]
+	then
+		CS5=$(($S51+$S61+$S62))
+		(( C5+=1 ))
+	fi
+	
+	
+#CS2=$(($S21+$S31+$S41))
+fi
+
+if [ "$S71" -eq 10 ]
+then
+		(( C5+=1 ))
+		(( C6+=1 ))
+		(( C7+=1 ))
+		if [ "$C5" -eq 3 ]
+		then 
+        CS5=$(($S51+$S61+$S71))
+		
+		fi 
+        
+else
+       if [ "(($S71+$S72))" -eq 10 ]
+       then
+                CS7=$(($S71+$S72+$S81))
+				
+       else
+               
+			CS7=$(($S71+$S72))
+       fi
+	   
+	 if [ "$C6" -eq 2 ]
+		then
+		CS6=$(($S61+$S71+$S72))
+		(( C6+=1 ))
+		
+	fi
+	(( C5+=1 ))
+	if [ "$C5" -eq 3 ]
+	then 
+	  CS5=$(($S51+$S61+$S71))
+	  (( C5+=1 ))
+	fi
+	(( C6+=1 ))
+	if [ "$C6" -eq 2 ]
+	then
+		CS6=$(($S61+$S71+$S72))
+		(( C6+=1 ))
+	fi
+	
+	
+#CS2=$(($S21+$S31+$S41))
+fi
+
+if [ "$S81" -eq 10 ]
+then
+		(( C6+=1 ))
+		(( C7+=1 ))
+		(( C8+=1 ))
+		if [ "$C6" -eq 3 ]
+		then 
+        CS6=$(($S61+$S71+$S81))
+		
+		fi 
+        
+else
+       if [ "(($S81+$S82))" -eq 10 ]
+       then
+                CS8=$(($S81+$S82+$S91))
+				
+       else
+               
+			CS8=$(($S81+$S82))
+       fi
+	   
+	 if [ "$C7" -eq 2 ]
+		then
+		CS7=$(($S71+$S81+$S82))
+		(( C7+=1 ))
+		
+	fi
+	(( C6+=1 ))
+	if [ "$C6" -eq 3 ]
+	then 
+	  CS6=$(($S61+$S71+$S81))
+	  (( C6+=1 ))
+	fi
+	(( C7+=1 ))
+	if [ "$C7" -eq 2 ]
+	then
+		CS7=$(($S71+$S81+$S82))
+		(( C7+=1 ))
+	fi
+	
+	
+#CS2=$(($S21+$S31+$S41))
+fi
+
+if [ "$S91" -eq 10 ]
+then
+		(( C7+=1 ))
+		(( C8+=1 ))
+		(( C9+=1 ))
+		if [ "$C7" -eq 3 ]
+		then 
+        CS7=$(($S71+$S81+$S91))
+		
+		fi 
+        
+else
+       if [ "(($S91+$S92))" -eq 10 ]
+       then
+                CS9=$(($S91+$S92+$S101))
+				
+       else
+               
+			CS9=$(($S91+$S92))
+       fi
+	   
+	 if [ "$C8" -eq 2 ]
+		then
+		CS8=$(($S81+$S91+$S92))
+		(( C8+=1 ))
+		
+	fi
+	(( C7+=1 ))
+	if [ "$C7" -eq 3 ]
+	then 
+	  CS7=$(($S71+$S81+$S91))
+	  (( C7+=1 ))
+	fi
+	(( C8+=1 ))
+	if [ "$C8" -eq 2 ]
+	then
+		CS8=$(($S81+$S91+$S92))
+		(( C8+=1 ))
+	fi
+	
+	
+#CS2=$(($S21+$S31+$S41))
+fi
+
+if [ "$S101" -eq 10 ]
+then
+		(( C8+=1 ))
+		(( C9+=1 ))
+		(( C10+=1 ))
+		if [ "$C8" -eq 3 ]
+		then 
+        CS8=$(($S81+$S91+$S101))
+		
+		fi 
+        
+else
+       if [ "(($S101+$S102))" -eq 10 ]
+       then
+                CS10=$(($S101+$S102+$S103))
+				
+       else
+               
+			CS10=$(($S101+$S102))
+       fi
+	   
+	 if [ "$C9" -eq 2 ]
+		then
+		CS9=$(($S91+$S101+$S102))
+		(( C9+=1 ))
+		
+	fi
+	(( C8+=1 ))
+	if [ "$C8" -eq 3 ]
+	then 
+	  CS8=$(($S81+$S91+$S101))
+	  (( C8+=1 ))
+	fi
+	(( C9+=1 ))
+	if [ "$C9" -eq 2 ]
+	then
+		CS9=$(($S91+$S101+$S102))
+		(( C9+=1 ))
+	fi
+	
+	
+#CS2=$(($S21+$S31+$S41))
+fi
+
+if [ "$S102" -eq 10 ]
+then
+		(( C9+=1 ))
+		(( C10+=1 ))
+		(( C11+=1 ))
+		if [ "$C9" -eq 3 ]
+		then 
+        CS9=$(($S91+$S101+$S102))
+		
+		fi 
+        
+else
+       if [ "(($S102+$S103))" -eq 10 ]
+       then
+                CS11=$(($S102+$S103+$S104))
+				
+       else
+               
+			CS11=$(($S102+$S103))
+       fi
+	   
+	 if [ "$C10" -eq 2 ]
+		then
+		CS10=$(($S101+$S102+$S103))
+		(( C10+=1 ))
+		
+	fi
+	(( C9+=1 ))
+	if [ "$C9" -eq 3 ]
+	then 
+	  CS9=$(($S91+$S101+$S102))
+	  (( C9+=1 ))
+	fi
+	(( C10+=1 ))
+	if [ "$C10" -eq 2 ]
+	then
+		CS10=$(($S101+$S102+$S103))
+		(( C10+=1 ))
+	fi
+	
+	
+#CS2=$(($S21+$S31+$S41))
+fi
+
+
+ 
+CS10=$(($S101+$S102+$S103))
+
+
+echo $CS1,$CS2,$CS3, $CS4, $CS5, $CS6, $CS7, $CS8, $CS9, $CS10
+echo $CS1, $(($CS1+$CS2)), $(($CS1+$CS2+$CS3)), $(($CS1+$CS2+$CS3+$CS4)), $(($CS1+$CS2+$CS3+$CS4+$CS5)), $(($CS1+$CS2+$CS3+$CS4+$CS5+$CS6)), $(($CS1+$CS2+$CS3+$CS4+$CS5+$CS6+$CS7)),  $(($CS1+$CS2+$CS3+$CS4+$CS5+$CS6+$CS7+$CS8)), $(($CS1+$CS2+$CS3+$CS4+$CS5+$CS6+$CS7+$CS8+$CS9)),  $(($CS1+$CS2+$CS3+$CS4+$CS5+$CS6+$CS7+$CS8+$CS9+$CS10))
+
+
+function Redirect
+{
+echo $NAME
+printf "Name \t S11 S12 S21 S22 S31 S32 S41 S42 S51 S52 S61 S62 S71 S72 S81 S82 S91 S92 S101 S102 S103 \n" ;
+printf "$NAME\t$S11 $S12 $S21 $S22 $S31 $S32 $S41 $S42 $S51 $S52 $S61 $S62 $S71 $S72 $S81 $S82 $S91 $S92 $S101 $S102 $S103 \n";
+printf "BYE\n"
+printf "Here is the Result\n"
+printf "######################################################################################################################\n"
+echo $CS1,$CS2,$CS3, $CS4, $CS5, $CS6, $CS7, $CS8, $CS9, $CS10
+echo $CS1, $(($CS1+$CS2)), $(($CS1+$CS2+$CS3)), $(($CS1+$CS2+$CS3+$CS4)), $(($CS1+$CS2+$CS3+$CS4+$CS5)), $(($CS1+$CS2+$CS3+$CS4+$CS5+$CS6)), $(($CS1+$CS2+$CS3+$CS4+$CS5+$CS6+$CS7)),  $(($CS1+$CS2+$CS3+$CS4+$CS5+$CS6+$CS7+$CS8)), $(($CS1+$CS2+$CS3+$CS4+$CS5+$CS6+$CS7+$CS8+$CS9)),  $(($CS1+$CS2+$CS3+$CS4+$CS5+$CS6+$CS7+$CS8+$CS9+$CS10))
+printf "######################################################################################################################\n"
+}
+Redirect > bowlresult.txt
