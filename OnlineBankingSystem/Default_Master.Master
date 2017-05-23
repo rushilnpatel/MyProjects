@@ -1,0 +1,114 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Default_Master.master.cs" Inherits="OnlineBankingSystem.Default_Master" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Online Banking System </title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link href="Style1.css" rel="stylesheet" type="text/css" />
+<!-- CuFon: Enables smooth pretty custom font rendering. 100% SEO friendly. To disable, remove this section -->
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/cufon-yui.js"></script>
+<script type="text/javascript" src="js/arial.js"></script>
+<script type="text/javascript" src="js/cuf_run.js"></script>
+<script type="text/javascript" src="js/radius.js"></script>
+<!-- CuFon ends -->
+    <style type="text/css">
+        .auto-style1 {
+            float: right;
+            margin-top: 2%;
+            margin-right: 10%;
+            padding: 1px;
+            position: relative;
+            left: 0px;
+            top: 0px;
+            width: 74%;
+            height: 190px;
+        }
+        .auto-style2 {
+            float: right;
+            margin-top: 2%;
+            margin-right: 10%;
+            padding: 1px;
+            position: relative;
+            left: -31px;
+            top: 0px;
+            width: 415px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+ 
+        <div id="Wrapper">
+       <div id="Header">
+           <div class="logo"><a href="Login.aspx" runat="server"><img alt="My Bank" src="~/images/Bank.png" border="0" runat="server" class="auto-style1" /></a><span style="display: block; margin-top: 3px; color: #f2f2f2; font-size: large;">Best Bank Best Customer Service</span></div>
+           <div class="auto-style2">
+               <asp:Menu ID="Menu1" CssClass="menu" cellspacing="6" runat="server" Orientation="Horizontal" Height="134px">
+                   <Items>
+                       <asp:MenuItem Text="Home  " Value="Home" NavigateUrl="~/Welcome.aspx"></asp:MenuItem>
+                       <asp:MenuItem Text="Apply Now   " Value="Apply Now">
+                           <asp:MenuItem Text="Saving Account   " Value="Saving Account" NavigateUrl="~/Signup.aspx"></asp:MenuItem>
+                           <asp:MenuItem Text="Checking Account" Value="Checking Account" NavigateUrl="~/Signup.aspx"></asp:MenuItem>
+                       </asp:MenuItem>
+                       <asp:MenuItem Text="Open Account" Value="Open Account" NavigateUrl="~/OpenAccount.aspx"></asp:MenuItem>
+                       <asp:MenuItem Text="Withdrawal" Value="Withdrawal" NavigateUrl="~/Withraw.aspx"></asp:MenuItem>
+                       <asp:MenuItem Text="Deposite" Value="Deposite" NavigateUrl="~/Deposit.aspx"></asp:MenuItem>
+                       <asp:MenuItem Text="Logout" Value="Logout" NavigateUrl="~/Login.aspx"></asp:MenuItem>
+                       </Items>
+                       </asp:Menu>
+               </div>
+           </div>
+       <div id="Content">
+           <br />
+           <br />
+           <br />
+           <br />
+           <br />
+           <br />
+           <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+           
+        <br />
+               <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                  
+                    <br />
+                   <br />
+
+               </asp:ContentPlaceHolder> 
+               
+    <p>
+        &nbsp;</p>
+    <p>
+        &nbsp;</p>
+       </div>
+        <div id="Footer">
+           <div class="FooterMenu">
+               <div class="MenuHolder">
+                   <p class="MenuHeading">My Bank</p>
+                   My Bank began operations in 1999 with a simple mission: to be a "World-class Bank".
+                   We realised that only a single-minded focus on product quality and service excellence would help us get there.
+                   Today, we are proud to say that we are well on our way towards that goal.
+               </div>
+               <div class="MenuHolder">
+                    
+                   <ul>
+                       <li>Applicant & Co-applican's address details</li>
+                       <li>Social Security (if available)</li>
+                       <li>Scanned copy of your identity & address proof (if available)</li>
+                       <li>Details entered in application should match your documents</li>
+                   </ul>
+               </div>
+               <div class="MenuHolder">
+                   <img class="BlkWhtLogo" alt="My Bank" src="" border="0" runat="server" />
+               </div>
+           </div>
+        </div>
+            </div>
+
+    </form>
+</body>
+
+</html>
+

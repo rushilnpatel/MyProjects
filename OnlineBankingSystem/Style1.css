@@ -1,0 +1,122 @@
+﻿
+body 
+{
+   color: #000035;
+   background: #f2f2f2;
+   font-size: 18px;
+   font-family: 'Lucida Bright' , Tahoma, Verdana, Arial, Sans-Serif;
+   margin: 0;
+   padding: 0;
+}
+
+a:link, a:visited { color: black; text-decoration: none; }
+a:hover{ text-decoration: underline; }
+
+#Wrapper
+{
+   width: 100%;
+   min-width: 900px;
+   margin: 0 auto;
+   padding: 0 auto;
+}
+
+#Header
+{
+   width: 100%;
+   height: 250px;
+   background: #257eb9 url(/../images/headerBG4.jpg);
+   border-bottom: 5px solid #71cef5;
+   margin: 0;
+   padding: 0;
+   position: relative;
+}
+.MainMenu
+{
+   float: right;
+   margin-top: 2%;
+   margin-right: 10%;
+   padding: 1px;
+   position: relative;
+}
+.MainMenu ul
+{
+   float: left;
+   list-style: none;
+   margin: 5px;
+   padding: 5px;
+}
+.MainMenu ul li
+{
+   float: left;
+   padding: 5px 10px;
+   background-color: black ;
+}
+.MainMenu ul li a
+{
+   float: left;
+   color: #fff;
+   font-size: 50px;
+   font-weight: bold;
+   font-family: 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, Sans-Serif;
+   text-decoration: none;
+}
+.MainMenu ul li a:hover
+{
+   color: #23a7d8;
+}
+
+.logo
+{
+   float: left;
+   margin: 1.5% 0 1% 10.5%;
+}
+.logo img
+{
+   width: 94%; /* 140px */
+}
+
+#Footer
+{
+   clear: both;
+   overflow: hidden;
+   width: 100%;
+   min-width: 900px;
+   background: #e0e0e0; /*d4d5d5*/
+   margin-top: 2%;
+   padding: 1% 0 1.5% 0;
+}
+#Footer .FooterMenu
+{
+   clear: both;
+   overflow: hidden;
+   margin: 0 10%;
+}
+#Footer .FooterMenu .MenuHolder
+{
+   color: #808080;
+   width: 30%;
+   float: left;
+   font-size: 10px;
+   margin: 0 10px 0 5px;
+}
+#Footer .FooterMenu .MenuHolder .MenuHeading
+{
+  font-size: 11px;
+  text-decoration: underline;
+}
+#Footer .FooterMenu .MenuHolder ul
+{
+   margin: 0;
+   padding: 0;
+   list-style: none;
+}
+#Footer a{color: #808080; text-decoration: underline;}
+#Footer .FooterMenu .MenuHolder .BlkWhtLogo{ width: 45%; float: right; margin-top: 14%; }
+
+#Footer p.CopyRight
+{
+   color: #808080;
+   float: left;
+   margin: 3px 0 0 10%;
+   padding: 2px;
+}
