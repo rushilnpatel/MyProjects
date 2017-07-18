@@ -1,0 +1,40 @@
+<empldata>
+    <employee>
+        <pcode>E-1001</pcode>
+        <pname>Urgish</pname>
+        <mfgDate>19 june 2012</mfgDate>
+        <image>
+            iphone7.jpeg
+        </image>
+    </employee>
+    <employee>
+        <employee>
+            <pcode>E-1002</pcode>
+            <pname>Keyur</pname>
+            <mfgDate>28 june 2012</mfgDate>
+            <image>
+                iphone7.jpeg
+            </image>
+        </employee>
+    </employee>
+    <employee>
+        <employee>
+            <pcode>E-1003</pcode>
+            <pname>Don Jon</pname>
+            <mfgDate>22 Aug 2012</mfgDate>
+            <image>
+                iphone7.jpeg
+            </image>
+        </employee>
+    </employee>
+    <employee>
+        <employee>
+            <pcode>E-1004</pcode>
+            <pname>Miche;</pname>
+            <mfgDate>2 Nov 2012</mfgDate>
+            <image>
+                iphone7.jpeg
+            </image>
+        </employee>
+    </employee>
+</empldata>

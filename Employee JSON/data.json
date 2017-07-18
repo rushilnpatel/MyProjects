@@ -1,0 +1,26 @@
+[
+  {
+    "pcode":"E-1001",
+    "pname":"Urgish",
+    "mfgDate":"19 feb 2012",
+    "image":"iphone7.jpeg"
+  },
+  {
+    "pcode":"E-1002",
+    "pname":"Keyur",
+    "mfgDate":"28 june 2012",
+    "image":"iphone7.jpeg"
+  },
+  {
+    "pcode":"E-1003",
+    "pname":"Don Jon",
+    "mfgDate":"22 Aug 2015",
+    "image":"iphone7.jpeg"
+  },
+  {
+    "pcode":"E-1004",
+    "pname":"Michel",
+    "mfgDate":"2 Nov 2015",
+    "image":"iphone7.jpeg"
+  }
+]
