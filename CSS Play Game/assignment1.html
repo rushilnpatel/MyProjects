@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Play with CSS</title>
+    <link href="../AJAX/css/bootstrap.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="jumbotron">
+    <h1>Play with CSS</h1>
+</div>
+
+<div class="container col-md-offset-1">
+    <h1 id="txt" class="jumbotron"> This text is Left Aligned</h1>
+    <br>
+    <br>
+    <input type="button" class="btn-danger btn-lg" value="Left" onclick="lft(); return false">
+    <input type="button" class="btn-danger btn-lg" value="Center" onclick="cntr(); return false">
+    <input type="button" class="btn-danger btn-lg" value="Right" onclick="rgt(); return false">
+    <br>
+    <br>
+    <label>
+    <input id="boldz" type="checkbox" value="Bold" onchange="bld(); return false">
+    Bold </label>
+    <label>
+    <input id="itl" type="checkbox" value="Italic" onchange="itl(); return false">
+    Italic</label>
+    <br>
+    <br>
+    <label>
+    <input type="radio" name="radioGroup" id="red" value="red" onchange="radioColor(); return false">
+        Red </label>
+    <label>
+    <input type="radio" name="radioGroup" id="green" value="green" onchange="radioColor(); return false">
+    Green </label>
+    <label>
+    <input type="radio" name="radioGroup" id="blue" value="blue" onchange="radioColor(); return false">
+    Blue </label>
+    <br>
+    <select class="form-control form-control-lg" id="ddl" onchange="txtsize(); return false">
+        <option selected>Choose..</option>
+        <option value="10px">10</option>
+        <option value="20px">20</option>
+        <option value="30px">30</option>
+        <option value="40px">40</option>
+        <option value="50px">50</option>
+    </select>
+</div>
+<script type="text/javascript" src="assignment1.js">
+
+</script>
+</body>
+</html>
