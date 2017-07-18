@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../../lib/angular.js"></script>
+    <script src="app.js"></script>
+    <script src="DataController.js"></script>
+</head>
+<body>
+
+<div ng-controller="DataController as vm">
+    <input type="text" ng-model="txtSearch">
+    Employee Count = {{vm.empl.length}}
+    <li ng-repeat="eobj in vm.empl | filter:txtSearch">
+
+        <h1>Name : {{eobj.ename}}</h1>
+        <h2>Age: {{eobj.age}}</h2>
+    </li>
+
+</div>
+</body>
+</html>
